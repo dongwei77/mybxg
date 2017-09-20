@@ -8,8 +8,10 @@ require.config({
         jquery : 'assets/jquery/jquery',
         cookie : 'assets/jquery-cookie/jquery.cookie',
         template : 'assets/artTemplate/template-web',
+        bootstrap : 'assets/bootstrap/js/bootstrap.min',
         common : 'js/common',
         login  : 'js/login',
         nprogress : 'assets/nprogress/nprogress',
+        teacherList : 'js/teacher-list'
     }
 })

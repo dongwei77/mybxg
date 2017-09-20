@@ -15,8 +15,9 @@ define(['jquery','template','cookie'],function($,template){
 	}
 
 	//设置用户头像信息
-	var loginInfo = $.cookie('loginInfo');
-	loginInfo = loginInfo && JSON.parse(loginInfo);
+	//var loginInfo = $.cookie('loginInfo');
+	//loginInfo = loginInfo && JSON.parse(loginInfo);
+	var loginInfo = $.cookie('loginInfo') && $.parseJSON($.cookie('loginInfo'));
 	//设置用户头像信息
 	//$('.aside .profile .avatar img').attr('src',loginInfo.tc_avatar);
 	//$('.aside .profile h4').html(loginInfo.tc_name);
@@ -27,7 +28,9 @@ define(['jquery','template','cookie'],function($,template){
 			 +'<h4>{{tc_name}}</h4>';
 
 	var html = template.render(tpl,loginInfo);
-	$('.aside .profile').html(html);
+	$('.aside .profile').html(html)
+
+	console.log(loginInfo+"_______"+html);
 
 
 
