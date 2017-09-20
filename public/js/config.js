@@ -7,9 +7,9 @@ require.config({
     paths : {
         jquery : 'assets/jquery/jquery',
         cookie : 'assets/jquery-cookie/jquery.cookie',
+        template : 'assets/artTemplate/template-web',
         common : 'js/common',
         login  : 'js/login',
-        template : 'assets/artTemplate/template.js',
         nprogress : 'assets/nprogress/nprogress',
     }
 })
