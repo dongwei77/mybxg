@@ -1,7 +1,6 @@
 /**
  * Created by Administrator on 2017/9/19.
  */
-/*Õ®”√≈‰÷√*/
 require.config({
     baseUrl : '/public',
     paths : {
@@ -13,5 +12,9 @@ require.config({
         login  : 'js/login',
         nprogress : 'assets/nprogress/nprogress',
         teacherList : 'js/teacher-list'
+    },
+    shim :{
+        bootstrap : ['jquery']
     }
-})
+
+});
