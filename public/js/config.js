@@ -11,7 +11,9 @@ require.config({
         common : 'js/common',
         login  : 'js/login',
         nprogress : 'assets/nprogress/nprogress',
-        teacherList : 'js/teacher-list'
+        teacherList : 'js/teacher-list',
+        teacherAdd : 'js/teacher-add',
+        util : 'js/util'
     },
     shim :{
         bootstrap : ['jquery']

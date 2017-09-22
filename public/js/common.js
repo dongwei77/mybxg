@@ -7,18 +7,18 @@ define(['jquery','template','cookie'],function($,template){
 		$(this).next().slideToggle();
 	});
 
-	//¼ì²âÓÃ»§ÊÇ·ñµÇÂ¼
+	//
 	var flag = $.cookie('PHPSESSID');
 	if(!flag && location.pathname != '/main/login'){
-		/*Èç¹ûflag²»´æÔÚ  Ìø×ªµÇÂ¼Ò³Ãæ*/
+		/**/
 		location.href = '/main/login';
 	}
 
-	//ÉèÖÃÓÃ»§Í·ÏñÐÅÏ¢
+	//
 	//var loginInfo = $.cookie('loginInfo');
 	//loginInfo = loginInfo && JSON.parse(loginInfo);
 	var loginInfo = $.cookie('loginInfo') && $.parseJSON($.cookie('loginInfo'));
-	//ÉèÖÃÓÃ»§Í·ÏñÐÅÏ¢
+	//
 	//$('.aside .profile .avatar img').attr('src',loginInfo.tc_avatar);
 	//$('.aside .profile h4').html(loginInfo.tc_name);
 
@@ -30,11 +30,11 @@ define(['jquery','template','cookie'],function($,template){
 	var html = template.render(tpl,loginInfo);
 	$('.aside .profile').html(html)
 
-	console.log(loginInfo+"_______"+html);
+	//console.log(loginInfo+"_______"+html);
 
 
 
-	/*ÍË³öµÇÂ¼*/
+	/*é€€å‡ºç™»å½•*/
 	$('#logoutBtn').on('click', function () {
 		$.ajax({
 			url : '/api/logout',
