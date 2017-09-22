@@ -8,6 +8,8 @@ require.config({
         cookie : 'assets/jquery-cookie/jquery.cookie',
         template : 'assets/artTemplate/template-web',
         bootstrap : 'assets/bootstrap/js/bootstrap.min',
+        datepicker : 'assets/bootstrap-datepicker/js/bootstrap-datepicker',
+        language : 'assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
         common : 'js/common',
         login  : 'js/login',
         nprogress : 'assets/nprogress/nprogress',
@@ -16,7 +18,13 @@ require.config({
         util : 'js/util'
     },
     shim :{
-        bootstrap : ['jquery']
+        bootstrap :{
+            deps : ['jquery']
+        },
+        language:{
+            deps : ['jquery','datepicker']
+        }
+
     }
 
 });
