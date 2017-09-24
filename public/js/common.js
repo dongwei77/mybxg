@@ -30,10 +30,6 @@ define(['jquery','template','cookie'],function($,template){
 	var html = template.render(tpl,loginInfo);
 	$('.aside .profile').html(html)
 
-	//console.log(loginInfo+"_______"+html);
-
-
-
 	/*退出登录*/
 	$('#logoutBtn').on('click', function () {
 		$.ajax({

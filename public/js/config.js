@@ -10,6 +10,8 @@ require.config({
         bootstrap : 'assets/bootstrap/js/bootstrap.min',
         datepicker : 'assets/bootstrap-datepicker/js/bootstrap-datepicker',
         language : 'assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+        validate:'assets/jquery-validate/jquery-validate',
+        form:'assets/jquery-form/jquery.form',
         common : 'js/common',
         login  : 'js/login',
         nprogress : 'assets/nprogress/nprogress',
@@ -23,6 +25,9 @@ require.config({
         },
         language:{
             deps : ['jquery','datepicker']
+        },
+        validate:{
+            deps: ['jquery']
         }
 
     }
