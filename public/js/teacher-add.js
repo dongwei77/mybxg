@@ -25,36 +25,6 @@ define(['jquery','template','util','datepicker','language','validate','form'], f
     }
 
     //实现表单的提交
-    //function submitForm(url){
-    //    $('#teacherForm').validate({
-    //        sendForm :false,
-    //        valid : function () {
-    //            $(this).ajaxSubmit({
-    //                type : 'post',
-    //                url : url,
-    //                success : function(data){
-    //                    if(data.code == 200){
-    //                       alert(1)
-    //                        location.href = '/teacher/list';
-    //                    }
-    //                }
-    //            })
-    //        },
-    //        description :{
-    //            tcName : {
-    //                required :'用户名不能为空'
-    //            },
-    //            tcPass  : {
-    //                required : '密码不能为空',
-    //                pattern : '密码必须为6为数字'
-    //            },
-    //            tcJoinDate : {
-    //                required : '日期不能为空'
-    //            }
-    //        }
-    //    })
-    //}
-
     function submitForm(url) {
 
         $('#teacherForm').validate({

@@ -17,7 +17,8 @@ require.config({
         nprogress : 'assets/nprogress/nprogress',
         teacherList : 'js/teacher-list',
         teacherAdd : 'js/teacher-add',
-        util : 'js/util'
+        util : 'js/util',
+        settings : 'js/settings'
     },
     shim :{
         bootstrap :{
