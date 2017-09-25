@@ -9,9 +9,12 @@ require.config({
         template : 'assets/artTemplate/template-web',
         bootstrap : 'assets/bootstrap/js/bootstrap.min',
         datepicker : 'assets/bootstrap-datepicker/js/bootstrap-datepicker',
+        ckeditor :'assets/ckeditor/ckeditor',
         language : 'assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
         validate:'assets/jquery-validate/jquery-validate',
+        region : 'assets/jquery-region/jquery.region',
         form:'assets/jquery-form/jquery.form',
+        uploadify : 'assets/jquery-uploadify/jquery.uploadify.min',
         common : 'js/common',
         login  : 'js/login',
         nprogress : 'assets/nprogress/nprogress',
@@ -29,7 +32,14 @@ require.config({
         },
         validate:{
             deps: ['jquery']
+        },
+        uploadify :{
+            deps :['jquery']
+        },
+        ckeditor :{
+            exports : 'CKEDITOR'
         }
+
 
     }
 
