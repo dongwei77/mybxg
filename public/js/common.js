@@ -42,6 +42,9 @@ define(['jquery','template','cookie'],function($,template){
 			}
 		})
 	})
+
+	//左侧导航课程点击展开
+
 })
 
 
