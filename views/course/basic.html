@@ -44,19 +44,19 @@
             <!-- 步聚 -->
             <ul class="forwards list-unstyled">
                 <li>
-                    <a href="./course_add_step1.html" class="active">
+                    <a href="/course/basic?cs_id={{cs_id}}" class="active">
                         <b>1</b>
                         基本信息
                     </a>
                 </li>
                 <li>
-                    <a href="./course_add_step2.html">
+                    <a href="/course/picture?cs_id={{cs_id}}">
                         <b>2</b>
                         课程图片
                     </a>
                 </li>
                 <li>
-                    <a href="./course_add_step3.html">
+                    <a href="/course/lesson?cs_id={{cs_id}}">
                         <b>3</b>
                         课时管理
                     </a>
@@ -68,7 +68,7 @@
                 <div class="title">
                     <h5>基本信息 <small>BASIC INFORMATION</small></h5>
                 </div>
-                <form action="" class="basic form-horizontal">
+                <form id="basicForm" class="basic form-horizontal">
                     <div class="form-group">
                         <label class="col-xs-2 control-label">标题</label>
                         <div class="col-xs-8">
@@ -84,7 +84,7 @@
                     <div class="form-group">
                         <label class="col-xs-2 control-label">讲师</label>
                         <div class="col-xs-8">
-                            <select name="" class="form-control input-sm">
+                            <select name="cs_tc_id" class="form-control input-sm">
                                 <option value="">请选择讲师</option>
                                 {{ if teacher}}
                                     {{each teacher}}
@@ -106,7 +106,7 @@
                                     {{/each}}
                                 {{/if}}
                             </select>
-                            <select id="secondType"  name="" class="form-control input-sm">
+                            <select id="secondType"  name="cs_cg_id" class="form-control input-sm">
                                 <option value="">请选择二级菜单</option>
                                 {{ if category}}
                                     {{each category.childs}}
@@ -122,13 +122,13 @@
                     <div class="form-group">
                         <label class="col-xs-2 control-label">标签</label>
                         <div class="col-xs-8">
-                            <input name="{{cs_tags}}" value="{{cs_tags}}" type="text" class="form-control input-sm">
+                            <input name="cs_tags" value="{{cs_tags}}" type="text" class="form-control input-sm">
                             <p class="help-block">将会应用于按标签搜索课程、相关课程的提取等</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-10">
-                            <a href="./course_add_step2.html" class="btn btn-success btn-sm pull-right">保 存</a>
+                            <input type="submit" class="btn btn-success btn-sm pull-right" value="保 存" />
                         </div>
                     </div>
                 </form>

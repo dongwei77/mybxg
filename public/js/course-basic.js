@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/9/25.
  */
-define(['jquery','template','util','ckeditor'], function ($,template,util,ckeditor) {
+define(['jquery','template','util','ckeditor','validate','form'], function ($,template,util,ckeditor) {
     //左侧菜单栏
     util.setMenu('/course/add');
     //获取课程id
@@ -45,6 +45,28 @@ define(['jquery','template','util','ckeditor'], function ($,template,util,ckedit
 
             //处理富文本
             CKEDITOR.replace('editor');
+
+            //处理提交表单事件
+            $("#basicForm").validate({
+                sendForm : false,
+                valid : function () {
+                    //处理富文本内容同步
+                    for(var instance in CKEDITOR.instances){
+                        CKEDITOR.instances[instance].updateElement()
+                    }
+                    $(this).ajaxSubmit({
+                        type : 'post',
+                        url : '/api/course/update/basic',
+                        data : {cs_id : csId},
+                        success : function (data) {
+                            if(data.code == 200){
+                                location.href = '/course/picture'
+                            }
+                        }
+                    })
+                }
+
+            })
         }
     })
 
