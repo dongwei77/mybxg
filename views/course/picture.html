@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
     <?php include('./views/common/style.html') ?>
+    <link rel="stylesheet" href="/public/assets/jquery-jcrop/css/Jcrop.css"/>
 </head>
 <body>
     
@@ -19,13 +20,19 @@
 
             </div>
         </div>
+        <form id="cropForm" style='display: none'>
+            <input type="text" name="x"/>
+            <input type="text" name="y"/>
+            <input type="text" name="w"/>
+            <input type="text" name="h"/>
+        </form>
     </div>
     <script type="text/template" id="pictureTpl">
         <ol class="breadcrumb">
             <li><a href="javascript:;">课程管理</a></li>
             <li class="active">课程添加</li>
         </ol>
-        <div class="steps">
+        <div class="steps" id="steps">
             <!-- 摘要 -->
             <div class="brief">
                 <div class="thumb">

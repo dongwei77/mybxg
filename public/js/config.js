@@ -15,18 +15,20 @@ require.config({
         region : 'assets/jquery-region/jquery.region',
         form:'assets/jquery-form/jquery.form',
         uploadify : 'assets/jquery-uploadify/jquery.uploadify.min',
+        jcrop : 'assets/jquery-jcrop/js/Jcrop.min',
+        util : 'js/util',
         common : 'js/common',
         login  : 'js/login',
         nprogress : 'assets/nprogress/nprogress',
         teacherList : 'js/teacher-list',
         teacherAdd : 'js/teacher-add',
-        util : 'js/util',
         settings : 'js/settings',
         index : 'js/index',
         courseAdd:'js/course-add',
         courseList:'js/course-list',
         courseBasic:'js/course-basic',
-        coursePicture : 'js/course-picture'
+        coursePicture : 'js/course-picture',
+        courseLesson :'js/course-lesson'
     },
     shim :{
         bootstrap :{
@@ -43,6 +45,9 @@ require.config({
         },
         ckeditor :{
             exports : 'CKEDITOR'
+        },
+        jcrop : {
+            deps : ['jquery']
         }
 
 
